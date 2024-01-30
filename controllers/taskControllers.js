@@ -19,7 +19,7 @@ const createTask = async (req, res) => {
         res.status(400).json({ error: 'Failed to create a task' });
         return;
     }
-    res.status(200).json({msg: 'Task created successfully'});
+    res.status(201).json({msg: 'Task created successfully'});
     return;
 };
 
