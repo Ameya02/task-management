@@ -4,7 +4,8 @@ const app = express();
 const port = 3001;
 const morgan = require('morgan');
 const connectDB = require('./config/db');
-
+const dotenv = require('dotenv');
+dotenv.config();
 app.use(express.json({extended: true}));
 app.use(morgan("dev"))
 app.use("/api/tasks", require("./routes/taskRoutes"));
